@@ -1,0 +1,16 @@
+{
+  "name": "angleeys-checker",
+  "version": "0.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start" : "phantomjs main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github-sassy:sassy/angleeys-checker.git"
+  },
+  "author": "Satoshi Watanabe",
+  "license": "MIT"
+}
