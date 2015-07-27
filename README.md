@@ -1,4 +1,6 @@
-# angleeys-checker
+# angel-eyes-checker
+
+ももいろクローバーZの情報取得
 
 phantomJSが必要
 
