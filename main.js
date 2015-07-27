@@ -1,15 +1,18 @@
 var page = require('webpage').create();
 
+var fs = require('fs');
+var userinfo = JSON.parse(fs.read('./userinfo.json'));
+
 var funcs = [
     function() {
         page.open('https://fc.momoclo.net/pc/login.php');
     },
     function() {
-        page.evaluate(function() {
-            document.getElementById("inputId").value = 'xxx';
-            document.getElementById("inputPw").value = 'xxx';
+        page.evaluate(function(userinfo) {
+            document.getElementById("inputId").value = userinfo.id;
+            document.getElementById("inputPw").value = userinfo.password;
             document.getElementById('loginForm').submit();
-        });
+        }, userinfo);
     },
     function() {
         page.open('https://fc.momoclo.net/comic4/medium.php');
